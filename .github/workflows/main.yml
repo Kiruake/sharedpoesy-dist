@@ -13,16 +13,16 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Steps represent a fghj sequence of tasks that will be executed as part of the job
     steps:       
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        username: ${{ secrets.USERNAME }}s
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-        cd /var/pocketbase/pb_public 
-        git pull origin main 
-        git status 
+          cd /var/pocketbase/pb_public 
+          git pull origin main 
+          git status 
